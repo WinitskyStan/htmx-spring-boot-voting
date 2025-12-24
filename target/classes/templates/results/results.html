@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <main>
+        <nav class="breadcrumb">
+            <a href="/management">← Back to all polls</a>
+        </nav>
+
+        <!-- Results card with inline fragment for live updates -->
+        <div id="poll-results"
+             th:fragment="poll-results"
+             hx-get="@{/results/{id}/live(id=${poll.id})}"
+             hx-trigger="every 3s"
+             hx-swap="outerHTML"
+             class="poll-results">
+
+            <h1 th:text="${poll.question}"></h1>
+            <p class="total-votes">Total votes: <span th:text="${totalVotes}">0</span></p>
+
+            <div th:each="option : ${poll.options}" class="result-row">
+                <div class="result-label">
+                    <span class="option-text" th:text="${option.text}"></span>
+                    <span class="vote-count" th:text="${option.voteCount} + ' votes'">0 votes</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"
+                         th:style="'width: ' + ${option.percentage} + '%'"
+                         th:title="${option.percentage} + '%'">
+                    </div>
+                </div>
+                <span class="percentage" th:text="${option.percentage} + '%'">0%</span>
+            </div>
+
+            <div class="results-actions">
+                <a th:href="@{/voting/{id}(id=${poll.id})}" class="btn-link">Go vote</a> |
+                <a href="/management" class="btn-link">Back to all polls</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

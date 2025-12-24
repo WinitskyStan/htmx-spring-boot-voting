@@ -1,0 +1,13 @@
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/shared/Vote.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/VotingAppApplication.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/voting/VotingSessionService.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/management/ManagementService.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/results/ResultsService.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/management/ManagementController.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/results/ResultsController.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/RootController.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/shared/PollOption.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/shared/Poll.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/voting/VotingController.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/voting/VotingService.java
+/home/swinitsky/htmx-spring-boot-voting/src/main/java/com/example/votingapp/shared/PollStore.java
